@@ -1,8 +1,11 @@
 import express from 'express';
 import bodyParser from 'body-parser';
+import adminRoutes from './routes/admin';
 
 const app = express();
 const port = 3000;
+
+app.use(adminRoutes);
 
 app.use(bodyParser.urlencoded({ extended: false }));
 
